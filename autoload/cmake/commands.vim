@@ -41,7 +41,7 @@ func! cmake#commands#create_build(directory)
   " Make the build.
   echomsg "[cmake] Configuring project for the first time..."
   let l:command = "cd " . getcwd() . "/" . a:directory . " && " .
-        \ "cmake .. " . l:build_options)
+        \ "cmake .. " . l:build_options
   if g:cmake_use_vimux == 1 && g:loaded_vimux
     call VimuxRunCommand(l:command)
   else
